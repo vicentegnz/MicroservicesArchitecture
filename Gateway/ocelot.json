@@ -1,0 +1,42 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/v1/Microservice1",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Microservice1",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Microservice2",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44363
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/Microservice2",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }
+  ]
+}
